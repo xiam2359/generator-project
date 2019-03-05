@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>jQuery Template</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        $(function(){
+            //$('#name').html();
+            //$('#message').html();
+            //$('#color').html();
+            $('button').click(function(){
+               var color = $('#color').val();
+               var message = $('#message').val();
+               var background = $('#background').val(option);
+               $('div').html(message).css('color', color).css('background-color', background);
+               
+            });
+        });  
+    </script>
+    
+  </head>
+  <body>
+      name:<input id ="name" required></h3>  
+      messages:<input id ="message" required></h3>
+      color:<input id ="color" placeholder = "blue" required></h3>
+      
+      <button>submit</button>
+      <div></div>
+  
+  </body>
+</html>
