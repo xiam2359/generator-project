@@ -6,27 +6,44 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script>
         $(function(){
-            //$('#name').html();
-            //$('#message').html();
-            //$('#color').html();
             $('button').click(function(){
-               var color = $('#color').val();
-               var message = $('#message').val();
-               var background = $('#background').val(option);
-               $('div').html(message).css('color', color).css('background-color', background);
-               
+              var name = $('#name').val();
+              var color = $('#color').val();
+              var mes = $('#mes').val();
+               $('h1').html(name + ", ")
+              $('h2').html(mes + ". ")
+              $('h2, h1').css('color', color);
+              /* background:<select name = "background-theme">
+        <option value = "image/galaxy.jpg">galaxy</option>
+        <option value = "image/heart.jpg">crush</option>
+        <option value = "image/light.jpg">sparkle</option>
+        <option value = "image/rain.jpg">rain</option>
+    </select> */
             });
         });  
     </script>
-    
+    <style>
+      h1,h2 {
+        text-align: center;
+        height: 300px;
+      }
+      div {
+          background: linear-gradient(lightcyan);
+      }
+     
+    </style>
   </head>
   <body>
-      name:<input id ="name" required></h3>  
-      messages:<input id ="message" required></h3>
-      color:<input id ="color" placeholder = "blue" required></h3>
-      
-      <button>submit</button>
-      <div></div>
+    name(who are you inviting):<input id = "name" required></br>
+    messages:<input id = "mes" required></br>
+    color of text:<input id ="color" required></br>
+    
+    <button>generate</button>
+    <div>
+      <h1></h1> 
+      <h2></h2>
+  
+    </div>
   
   </body>
 </html>
